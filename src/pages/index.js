@@ -2,19 +2,22 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <SEO title="Gatsby Tailwind Simple Setup" />
+
+    <div className="md-w-1/2 w-10/12 mx-auto bg-gray-300 mt-5 p-3 rounded-lg">
+      <p className="text-lg my-5">Gatsby &amp; Tailwind</p>
+      <p className="text-base mb-5">This is a very simple setup of Tailwind in a Gatsby project. The only plugins it uses are <a href="https://www.gatsbyjs.org/packages/gatsby-plugin-postcss/?=post" target="_blank" className="underline">Gatsby Post CSS</a> and <a href="https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/?=purge" target="_blank" className="underline">Gatsby Purge CSS</a>.</p>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
+
+    <div className="md-w-1/2 w-10/12 mx-auto bg-gray-200 mt-5 p-3 rounded-lg">
+      <p className="text-lg my-5">Setup</p>
+      <p className="text-base mb-5">You can download or clone the source from it's <a href="" target="_blank" className="underline">Github repo here</a>. Hope it helps.</p>
+    </div>
+
   </Layout>
 )
 

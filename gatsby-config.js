@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Gatsby Tailwind Basic Setup`,
+    description: `The simples Tailwind setup possible in a Gatsby project`,
+    author: `@GastonGarciaO`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -12,6 +12,14 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    `gatsby-plugin-postcss`,
+    {
+      resolve: "gatsby-plugin-purgecss",
+      options: {
+        tailwind: true,
+        purgeOnly: ["src/css/style.css"]
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
